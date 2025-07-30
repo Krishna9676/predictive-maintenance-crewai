@@ -19,20 +19,13 @@ from crewai.tools import tool
 import os
 from dotenv import load_dotenv # For local development
 
-# Load environment variables from .env file for local development
 load_dotenv()
-
-# --- Securely get API Key ---
-# For local development, use os.environ.get or dotenv
-# For Streamlit Cloud deployment, use st.secrets.get
-api_key = st.secrets.get("OPENAI_API_KEY") or os.environ.get("OPENAI_API_KEY")
-
+api_key = st.secrets["OPENAI_API_KEY"] if "OPENAI_API_KEY" in st.secrets else os.getenv("OPENAI_API_KEY")
 if not api_key:
-    st.error("API key not found. Please set the OPENAI_API_KEY secret in Streamlit Cloud or as an environment variable.")
-    st.stop() # Stop execution if API key is missing
-
-# --- Set the API key for CrewAI (or the LLM you are using) ---
+    st.error("API key missing! Please add it via Streamlit Secrets or .env file.")
+    st.stop()
 os.environ["OPENAI_API_KEY"] = api_key
+
 
 
 # --- 1. Simulate Equipment Data ---
