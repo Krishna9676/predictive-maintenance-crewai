@@ -1,10 +1,8 @@
 streamlit
-crewai
-crewai-tools
-scikit-learn
 pandas
 numpy
+scikit-learn
 matplotlib
 seaborn
-python-dotenv # If you use dotenv for local development
-# Add any other libraries you imported and used
+crewai==0.20.4
+python-dotenv
