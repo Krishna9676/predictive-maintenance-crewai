@@ -1,9 +1,10 @@
-numpy
-scikit-learn
-matplotlib
-crewai
 streamlit
+crewai
+crewai-tools
+scikit-learn
+pandas
+numpy
+matplotlib
 seaborn
-crewai==0.20.4
-chromadb==0.4.22
-
+python-dotenv # If you use dotenv for local development
+# Add any other libraries you imported and used
