@@ -1,7 +1,9 @@
-pandas
 numpy
 scikit-learn
 matplotlib
-seaborn
 crewai
 streamlit
+seaborn
+crewai==0.20.4
+chromadb==0.4.22
+
