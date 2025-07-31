@@ -4,5 +4,6 @@ numpy
 scikit-learn
 matplotlib
 seaborn
-crewai==0.20.4
+crewai==0.150.0
+crewai-tools
 python-dotenv
