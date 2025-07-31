@@ -7,15 +7,6 @@ import seaborn as sns
 import matplotlib.gridspec as gridspec
 from crewai import Agent, Task, Crew, Process
 from crewai.tools import tool
-import streamlit as st
-import pandas as pd
-import numpy as np
-from sklearn.ensemble import RandomForestClassifier
-import matplotlib.pyplot as plt
-import seaborn as sns
-import matplotlib.gridspec as gridspec
-from crewai import Agent, Task, Crew, Process
-from crewai.tools import tool
 import os
 from dotenv import load_dotenv # For local development
 
