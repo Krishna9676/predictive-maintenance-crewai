@@ -68,6 +68,10 @@ def train_model(df):
 def create_tool(user_input, model, df):
     @tool
     def anomaly_detector_tool(data_file: str) -> str:
+        """
+        Analyzes the latest sensor data and detects if there's an anomaly using the trained model.
+        Returns a detailed report with the result.
+        """
         latest = df.iloc[-1:]
         pred = model.predict(latest[['Temperature', 'Vibration', 'Pressure', 'RPM']])
         if pred[0] == 1:
