@@ -6,3 +6,5 @@ matplotlib
 seaborn
 crewai>=0.30.0
 python-dotenv
+crewai>=0.20.4
+
