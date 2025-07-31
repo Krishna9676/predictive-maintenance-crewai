@@ -20,10 +20,13 @@ import os
 from dotenv import load_dotenv # For local development
 
 load_dotenv()
-api_key = st.secrets["OPENAI_API_KEY"] if "OPENAI_API_KEY" in st.secrets else os.getenv("OPENAI_API_KEY")
+
+api_key = os.environ.get("OPENAI_API_KEY")
 if not api_key:
-    st.error("API key missing! Please add it via Streamlit Secrets or .env file.")
+    st.error("OPENAI_API_KEY not found. Please set it in Render's Environment Variables.")
     st.stop()
+
+# For CrewAI to work
 os.environ["OPENAI_API_KEY"] = api_key
 
 
