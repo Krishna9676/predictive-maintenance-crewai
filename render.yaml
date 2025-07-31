@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: predictive-maintenance-streamlit
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false  # You will manually add this in the Render dashboard
